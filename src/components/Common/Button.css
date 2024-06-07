@@ -1,0 +1,70 @@
+@keyframes rumble {
+  0% { transform: rotate(0deg); }
+  25% { transform: translate(2px, 0px) rotate(-3deg); }
+  50% { transform: translate(0px, -2px) rotate(0deg); }
+  75% { transform: translate(-2px, 0px) rotate(3deg); }
+  100% { transform: translate(0px, 2px) rotate(0deg); } 
+}
+
+button {
+  position: absolute;
+  border: none;
+  background: #4b5c91;
+  font-family: 'Lovelo';
+  font-size: 25px;
+  padding: 20px 15px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform .2s, color .2s, background .2s;
+}
+
+button.block {
+  position: relative;
+  display: block;
+}
+
+button.primary {
+  color: #f8bb5b;
+}
+
+button.primary:hover {
+  transform: scale(1.1);
+  color: white;
+  background: #f8bb5b;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+button.primary:active {
+  transform: scale(1);
+}
+
+button.secondary {
+  color: white;
+}
+
+button.option {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px 15px 10px;
+}
+
+button.secondary:hover,
+button.option:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+button.secondary:active,
+button.option:active {
+  transform: scale(1);
+}
+
+button.bad {
+  animation: rumble .0625s infinite linear;
+  transform: scale(1.2);
+  background: red;
+  color: white;
+}

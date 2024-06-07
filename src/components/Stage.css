@@ -1,0 +1,55 @@
+@keyframes slideInUp {
+  0% { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  } 
+}
+
+@keyframes slideInDown {
+  0% { 
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  } 
+}
+
+.stage {
+  height: 100%;
+  width: 100%;
+}
+
+.stage .backdrop {
+  position: absolute;
+  top: 0;
+  background: url('../../public/assets/images/case/1/bg.png') ;
+  background-size: cover;
+  height: 100%;
+  width: 60%;
+}
+
+.stage .backdrop::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  background: url('../../public/assets/images/case/1/bg.png') #1e3465d8;
+  background-size: 200%;
+  background-position: right;
+  background-blend-mode: multiply;
+  filter: blur(2px);
+  height: 100%;
+  width: 70%;
+}
+
+.stage h2 {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%, 0);
+}

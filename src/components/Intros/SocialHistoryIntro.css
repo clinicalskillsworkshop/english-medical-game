@@ -1,0 +1,18 @@
+.socialHistoryIntro .hint {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-size: 25px;
+  width: 380px;
+  top: 100px;
+  left: 620px;
+}
+
+.socialHistoryIntro .hint .heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.socialHistoryIntro .hint .questions {
+  line-height: 35px;
+}

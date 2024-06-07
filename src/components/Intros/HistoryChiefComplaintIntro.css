@@ -1,0 +1,23 @@
+.historyChiefComplaintIntro {
+  position: absolute;
+  width: 37%;
+  top: 100px;
+  left: 630px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.historyChiefComplaintIntro .hint {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.historyChiefComplaintIntro .hint b {
+  color: #f8bb5b;
+}
+
+.historyChiefComplaintIntro .body {
+  font-size: 25px;
+  line-height: 35px;
+}

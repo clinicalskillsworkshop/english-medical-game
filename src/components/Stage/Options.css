@@ -1,0 +1,36 @@
+.stage .options {
+  width: 40%;
+  position: absolute;
+  left: 57%;
+  top: 70px;
+}
+
+.stage .options .hint {
+  text-align: center;
+  color: white;
+  font-family: 'sans-serif';
+  font-size: 20px;
+  margin-left: 50px;
+  animation: slideInUp .3s 1 linear;
+}
+
+.stage .options .feedback {
+  background: #4b5c91;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 15px 15px;
+  margin-top: 50px;
+}
+
+.stage .options .feedback .heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+}
+
+.stage .options .feedback p {
+  margin: 0;
+}

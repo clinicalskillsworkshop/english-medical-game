@@ -1,0 +1,31 @@
+.file {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.file .heading {
+  padding: 15px 25px 10px;
+  font-family: 'Lovelo';
+  color: #f8bb5b;
+  background: #546b9d8a;
+  font-size: 34px;
+  text-align: left;
+}
+
+.file .body {
+  background: white;
+  padding: 15px 25px;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.file .body p {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+
+.file .body p b {
+  color: #f8bb5b;
+}

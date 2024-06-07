@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Lovelo';
+  src: url('../../public/assets/fonts/Lovelo.ttf');
+}
+
+.menu {
+  background: url('../../public/assets/images/menu/bg.png');
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.menu h1,
+.menu h2,
+.menu h3,
+.menu h4,
+.menu h5 {
+  font-family: 'Lovelo';
+  color: #f8bb5b;
+  background: #4b5d9175;
+  padding: 15px 30px 10px;
+  border-radius: 50px;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+}
