@@ -30,7 +30,7 @@ const CaseOneFlow = {
   actions: {
     PRINCIPAL_CHIEF_COMPLAINT: {
       label: 'Principal/Chief Complaint',
-      hint: 'Selecione a melhor pergunta para questionar sobre a Chief Complaint:',
+      hint: 'Selecione a melhor pergunta para questionar sobre a Queixa Principal:',
       options: [
         {label: 'How long have you been feeling like this?', result: false},
         {label: 'What brings you here today?', result: {
@@ -46,7 +46,7 @@ const CaseOneFlow = {
     },
     HISTORY_CHIEF_COMPLAINT: {
       label: 'History of Principal Complaint',
-      hint: 'Selecione mnemônico mais adequado para detalhar a queixa de “chest pain”:',
+      hint: 'Selecione mnemônico mais adequado para detalhar a queixa de “chest pain” na História da Doença Atual:',
       options: [
         {label: 'SOCRATES', result: { action: 'HISTORY_CHIEF_COMPLAINT_SOCRATES' }},
         {label: 'ODIPARA', result: false}
@@ -78,8 +78,8 @@ const CaseOneFlow = {
           }
         }},
         {label: 'When did the pain first start? ', result: {
-          patient: '“It started about 4 weeks ago, I thought it hurts because I’ve been coughing so much but it also hurts when I breathe in.”',
-          translation: '“Começou há cerca de 2 semanas, pensei que fosse porque tenho tossido muito, mas também dói quando inspiro.”',
+          patient: '“It started about 3 weeks ago, I thought it hurts because I’ve been coughing so much but it also hurts when I breathe in.”',
+          translation: '“Começou há cerca de 3 semanas, pensei que fosse porque tenho tossido muito, mas também dói quando inspiro.”',
           feedback: {
             heading: '(O)nset.',
             string: 'Esse é o segundo tópico dentro do mnemônico SOCRATES e tem o objetivo de questionar sobre o início da dor.'
@@ -133,6 +133,7 @@ const CaseOneFlow = {
     },
     PAST_MEDICAL_HISTORY: {
       label: 'Past Medical History',
+      hint: 'Selecione as melhores perguntas para questionar sobre História Médica Pregressa:',
       options: [
         {label: 'Do you have any other medical conditions? Which?', result: {
           patient: '“I have never been diagnosed with anything.”',
@@ -155,6 +156,7 @@ const CaseOneFlow = {
     },
     FAMILY_HISTORY: {
       label: 'Family History',
+      hint: 'Seleciona a melhor pergunta para perguntar sobre Histórico Familiar:',
       options: [
         {label: 'Are you allergic to any drugs? Which?', result: false},
         {label: 'Do you have any children?', result: false},
@@ -185,6 +187,7 @@ const CaseOneFlow = {
     },
     DRUG_HISTORY: {
       label: 'Drug History',
+      hint: 'Selecione a melhor pergunta para questionar sobre História Medicamentosa:',
       options: [
         {label: 'Are you allergic to any drugs? Which?', result: {
           patient: '“Not that I know of.”',
@@ -200,8 +203,7 @@ const CaseOneFlow = {
           translation: '“Não estou.”',
           feedback: {
             heading: 'Correct!',
-            string: 'Essa pergunta significa “Você está tomando alguma medicação no momento? Qual?” e faz parte do detalhamento da história medicamentosa do paciente. ',
-            helpers: [{component: DrugHistoryOptionHelper, x: 350, y: 50}]
+            string: 'Essa pergunta significa “Você está tomando alguma medicação no momento? Qual?” e faz parte do detalhamento da história medicamentosa do paciente. '
           }
         }},
         {label: 'Do you do any other drugs?', result: false},
