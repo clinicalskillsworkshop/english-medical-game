@@ -25,11 +25,33 @@
   width: 100%;
 }
 
+.stage.case-1 .backdrop {
+  background: url('../../public/assets/images/case/1/bg.png');
+  background-size: cover;
+}
+
+.stage.case-1 .backdrop::after {
+  background: url('../../public/assets/images/case/1/bg.png') #1e3465d8;
+  background-size: 200%;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+
+.stage.case-2 .backdrop {
+  background: url('../../public/assets/images/case/2/bg.png');
+  background-size: cover;
+}
+
+.stage.case-2 .backdrop::after {
+  background: url('../../public/assets/images/case/2/bg.png') #1e3465d8;
+  background-size: 200%;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+
 .stage .backdrop {
   position: absolute;
   top: 0;
-  background: url('../../public/assets/images/case/1/bg.png') ;
-  background-size: cover;
   height: 100%;
   width: 60%;
 }
@@ -38,10 +60,6 @@
   content: '';
   position: absolute;
   left: 100%;
-  background: url('../../public/assets/images/case/1/bg.png') #1e3465d8;
-  background-size: 200%;
-  background-position: right;
-  background-blend-mode: multiply;
   filter: blur(2px);
   height: 100%;
   width: 70%;

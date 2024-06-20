@@ -3,7 +3,7 @@ import './Stage.css';
 import Interactive from './Stage/Interactive';
 import Options from './Stage/Options';
 
-function Stage( { action, reset } ) {
+function Stage( { action, reset, backgroundClass } ) {
   const [option, setOption] = useState(null);
   const [introCompleted, setIntroCompleted] = useState(false);
   const IntroComponent = action.intro ?? null;
@@ -23,7 +23,7 @@ function Stage( { action, reset } ) {
   }, [action.options, showIntro]);
 
   return (
-    <div className='stage'>
+    <div className={'stage ' + backgroundClass}>
       <div className='backdrop'></div>
       <h2>{action.label}</h2>
 

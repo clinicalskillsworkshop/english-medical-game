@@ -6,6 +6,7 @@ import Button from './components/Common/Button';
 import File from './components/Menu/File';
 import CaseOneFlow from './flows/CaseOne';
 import Stage from './components/Stage';
+import CaseTwoFlow from './flows/CaseTwo';
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -47,9 +48,15 @@ function App() {
         <Menu>
           {!flow &&
           <>
-            <Case label='Case 1' x={250} y={90} onClick={() => setFlow(CaseOneFlow)} />
-            <Case label='Case 2' x={250} y={390} />
-            <Case label='Case 3' x={250} y={690} />
+            <h1 style={{ 
+              top: '70px', 
+              left: '320px', 
+              position: 'absolute' 
+            }}>
+              Hospital Admissions
+            </h1>
+            <Case label='Case 1' x={250} y={250} onClick={() => setFlow(CaseOneFlow)} />
+            <Case label='Case 2' x={250} y={550} onClick={() => setFlow(CaseTwoFlow)} />
           </>}
 
           {flow && !caseOpen && 
@@ -91,6 +98,7 @@ function App() {
 
           {flow && caseOpen && action && <Stage 
             action={action} 
+            backgroundClass={flow.backgroundClass}
             reset={(action) => setAction(action ? flow.actions[action] : null)} />}
         </Menu>
       </div>

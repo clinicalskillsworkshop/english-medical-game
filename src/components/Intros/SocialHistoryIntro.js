@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from '../Common/Button';
 import './SocialHistoryIntro.css';
 
-function SocialHistoryIntro({ setIntroCompleted }) {
+function SocialHistoryIntro(questions, { setIntroCompleted }) {
   const [exploreClicked, setExploreClicked] = useState(false);
 
   return (
@@ -18,13 +18,7 @@ function SocialHistoryIntro({ setIntroCompleted }) {
           <div className='hint'>
             <div className='heading'>Questions:</div>
             <ul className='questions'>
-              <li>Do you live with anyone?</li>
-              <li>Do you work currently?</li>
-              <li>Are you up to date with vaccinations?</li>
-              <li>Have you been vaccinated for tuberculosis (TB)?</li>
-              <li>Do you smoke?</li>
-              <li>Do you drink alcohol?</li>
-              <li>Do you use recreational drugs?</li>
+              {questions.map((v, k) => <li key={k}>{v}</li>)}
             </ul>
           </div>
         }
@@ -40,4 +34,5 @@ function SocialHistoryIntro({ setIntroCompleted }) {
   );
 }
 
-export default SocialHistoryIntro;
+const SocialHistoryIntroBuilder = (questions) => SocialHistoryIntro.bind(this, questions);
+export default SocialHistoryIntroBuilder;

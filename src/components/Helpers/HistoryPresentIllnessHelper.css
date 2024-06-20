@@ -1,0 +1,12 @@
+.historyPresentIllnessHelper {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #1e3465;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  padding: 20px;
+  font-family: sans-serif;
+  border-radius: 30px;
+  width: 35%;
+}

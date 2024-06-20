@@ -1,0 +1,23 @@
+.historyPresentIllnessIntro {
+  position: absolute;
+  width: 37%;
+  top: 100px;
+  left: 630px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.historyPresentIllnessIntro .hint {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.historyPresentIllnessIntro .hint b {
+  color: #f8bb5b;
+}
+
+.historyPresentIllnessIntro .body {
+  font-size: 25px;
+  line-height: 35px;
+}

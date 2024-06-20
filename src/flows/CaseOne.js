@@ -5,7 +5,7 @@ import HistoryChiefComplaintIntro from "../components/Intros/HistoryChiefComplai
 import SocialHistoryIntro from "../components/Intros/SocialHistoryIntro";
 
 const CaseOneFlow = {
-  background: '../../../public/assets/images/case/1/bg.png',
+  backgroundClass: 'case-1',
   file: [
     {label: 'Name', string: 'John Smith'},
     {label: 'Age', string: '34'},
@@ -15,7 +15,7 @@ const CaseOneFlow = {
     {label: 'Temp.', string: '38,5°C'},
     {label: 'BP', string: '137x84 mmHg'},
     {spacer:true},
-    {label: 'Reason for admission', string: 'Patient was admitted due to chest pain, cough and fever.'},
+    {label: 'Reason for admission', string: 'Patient was admitted with chest pain, cough and fever.'},
     {spacer:true},
     {label: 'Other documents', string: 'Patient doesn’t present other documents.'}
   ],
@@ -172,14 +172,30 @@ const CaseOneFlow = {
     },
     SOCIAL_HISTORY: {
       label: 'Social History',
-      intro: SocialHistoryIntro,
+      intro: SocialHistoryIntro([
+        'Do you live with anyone?',
+        'Do you work currently?',
+        'Are you up to date with vaccinations?',
+        'Have you been vaccinated for tuberculosis (TB)?',
+        'Do you smoke?',
+        'Do you drink alcohol?',
+        'Do you use recreational drugs?'
+      ]),
       options: [
         {
           result: {
             patient: '“I live on my own and work in an IT company. I think I’m up to date with my normal vaccinations but I’m not sure about TB, I don’t think I’ve had a vaccine for that. I don’t drink or smoke and I’ve never taken drugs.”',
             translation: '“Moro sozinho e trabalho em uma empresa de TI. Acho que estou com as vacinas em dia, mas não tenho certeza sobre TB, acho que não tomei vacina para isso. Não bebo nem fumo e nunca usei drogas.”',
             feedback: {
-              helpers: [{component: SocialHistoryHelper, x: 35, y: 40}]
+              helpers: [{component: SocialHistoryHelper([
+                'Do you live with anyone?',
+                'Do you work currently?',
+                'Are you up to date with vaccinations?',
+                'Have you been vaccinated for tuberculosis (TB)?',
+                'Do you smoke?',
+                'Do you drink alcohol?',
+                'Do you use recreational drugs?'
+              ]), x: 35, y: 40}]
             }
           }
         }
