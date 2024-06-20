@@ -166,8 +166,8 @@ const CaseTwoFlow = {
       options: [
         {
           result: {
-            patient: '“I live with my husband. I’m normally independent and work as a florist but I’m thinking about retiring. I don’t smoke but I do share a bottle of wine with my husband at the weekend.”',
-            translation: '“Eu moro com meu marido. Sou autônoma e trabalho como florista, mas estou pensando em me aposentar. Não fumo, mas eu costumo dividir uma garrafa de vinho com meu marido no fim de semana.”',
+            patient: '“I live with my husband. I’m normally independent and work as a florist but I’m thinking about retiring. I don’t smoke but I do share a bottle of wine with my husband on the weekends.”',
+            translation: '“Eu moro com meu marido. Sou autônoma e trabalho como florista, mas estou pensando em me aposentar. Não fumo, mas eu costumo dividir uma garrafa de vinho com meu marido nos fins de semana.”',
             feedback: {
               helpers: [{component: SocialHistoryHelper([
                 'Do you live with anyone?',
