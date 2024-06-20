@@ -56,20 +56,12 @@ const CaseTwoFlow = {
       intro: HistoryPresentIllnessIntro,
       helpers: [{component: HistoryPresentIllnessHelper, x: 210, y: 30}], 
       options: [
-        {label: 'How long have you been feeling like this?', result: {
-          patient: '“I noticed it five days ago but it feels worse this morning.”',
-          translation: '“Eu percebi há cinco dias atrás, mas parece pior essa manhã.”',
+        {label: 'Is there anything that makes it better?', result: {
+          patient: '“Nothing that I can remember at the moment.”',
+          translation: '“Nada que eu consiga me lembrar no momento.”',
           feedback: {
-            heading: '(O)nset.',
-            string: 'Esse é o primeiro tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar o início da queixa.'
-          }
-        }},
-        {label: 'Do you feel like that all day or only at specific moments?', result: {
-          patient: '“All day.”',
-          translation: '“O dia todo.”',
-          feedback: {
-            heading: '(D)uration',
-            string: 'Esse é o segundo tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar a duração e o padrão temporal da queixa.'
+            heading: '(R)elieving factors',
+            string: 'Esse é o sexto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os fatores de melhora.'
           }
         }},
         {label: 'Any chance you can score it from 1 to 10, 10 being the worse you ever felt?', result: {
@@ -80,6 +72,14 @@ const CaseTwoFlow = {
             string: 'Esse é o terceiro tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar a intensidade/severidade da queixa.'
           }
         }},
+        {label: 'How long have you been feeling like this?', result: {
+          patient: '“I noticed it five days ago but it feels worse this morning.”',
+          translation: '“Eu percebi há cinco dias atrás, mas parece pior essa manhã.”',
+          feedback: {
+            heading: '(O)nset.',
+            string: 'Esse é o primeiro tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar o início da queixa.'
+          }
+        }},
         {label: 'When did it get worse?', result: {
           patient: '“I started getting twangs of pain yesterday evening after dinner.”',
           translation: '“Comecei a sentir pontadas de dor ontem à noite, após o jantar.”',
@@ -88,20 +88,12 @@ const CaseTwoFlow = {
             string: 'Esse é o quarto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar a progressão da queixa.'
           }
         }},
-        {label: 'Is there anything that makes it worse?', result: {
-          patient: '“I tried to have some cereal this morning but it made me feel worse.”',
-          translation: '“Tentei comer um pouco de cereal esta manhã, mas isso me deixou pior.”',
+        {label: 'Do you feel like that all day or only at specific moments?', result: {
+          patient: '“All day.”',
+          translation: '“O dia todo.”',
           feedback: {
-            heading: '(A)ggravating factors',
-            string: 'Esse é o quinto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os fatores de piora.'
-          }
-        }},
-        {label: 'Is there anything that makes it better?', result: {
-          patient: '“Nothing that I can remember at the moment.”',
-          translation: '“Nada que eu consiga me lembrar no momento.”',
-          feedback: {
-            heading: '(R)elieving factors',
-            string: 'Esse é o sexto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os fatores de melhora.'
+            heading: '(D)uration',
+            string: 'Esse é o segundo tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar a duração e o padrão temporal da queixa.'
           }
         }},
         {label: 'Do you have any other symptoms?', result: {
@@ -110,6 +102,14 @@ const CaseTwoFlow = {
           feedback: {
             heading: '(A)ssociated symptoms',
             string: 'Esse é o último tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os sintomas associados à queixa principal.'
+          }
+        }},
+        {label: 'Is there anything that makes it worse?', result: {
+          patient: '“I tried to have some cereal this morning but it made me feel worse.”',
+          translation: '“Tentei comer um pouco de cereal esta manhã, mas isso me deixou pior.”',
+          feedback: {
+            heading: '(A)ggravating factors',
+            string: 'Esse é o quinto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os fatores de piora.'
           }
         }}
       ]
