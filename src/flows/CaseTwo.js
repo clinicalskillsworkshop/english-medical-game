@@ -29,7 +29,7 @@ const CaseTwoFlow = {
   actions: {
     PRESENTING_COMPLAINT: {
       label: 'Presenting Complaint',
-      hint: '',
+      hint: 'Selecione a melhor pergunta para questionar sobre a Queixa Principal:',
       options: [
         {label: 'What is the pain like?', result: false},
         {label: 'What do you do for a living?', result: false},
@@ -45,7 +45,7 @@ const CaseTwoFlow = {
     },
     HISTORY_PRESENT_ILLNESS: {
       label: 'History Of Present Illness',
-      hint: '',
+      hint: 'Selecione o mnemônico mais adequado para detalhar a queixa de “feeling bloated and swollen belly” na História da Doença Atual:',
       options: [
         {label: 'SOCRATES', result: false},
         {label: 'ODIPARA', result: { action: 'HISTORY_PRESENT_ILLNESS_ODIPARA' }}
@@ -57,8 +57,8 @@ const CaseTwoFlow = {
       helpers: [{component: HistoryPresentIllnessHelper, x: 210, y: 30}], 
       options: [
         {label: 'Is there anything that makes it better?', result: {
-          patient: '“Nothing that I can remember at the moment.”',
-          translation: '“Nada que eu consiga me lembrar no momento.”',
+          patient: '“I tried taking some ibuprofen yesterday which made me feel a bit better but now I feel everything again.”',
+          translation: '“Eu tomei ibuprofeno ontem, o que me fez sentir um pouco melhor, mas hoje eu sinto tudo de novo.”',
           feedback: {
             heading: '(R)elieving factors',
             string: 'Esse é o sexto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os fatores de melhora.'
@@ -73,16 +73,16 @@ const CaseTwoFlow = {
           }
         }},
         {label: 'How long have you been feeling like this?', result: {
-          patient: '“I noticed it five days ago but it feels worse this morning.”',
-          translation: '“Eu percebi há cinco dias atrás, mas parece pior essa manhã.”',
+          patient: '“I noticed it yesterday but it feels worse this morning.”',
+          translation: '“Eu notei ontem, mas parece pior hoje pela manhã.”',
           feedback: {
             heading: '(O)nset.',
             string: 'Esse é o primeiro tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar o início da queixa.'
           }
         }},
         {label: 'When did it get worse?', result: {
-          patient: '“I started getting twangs of pain yesterday evening after dinner.”',
-          translation: '“Comecei a sentir pontadas de dor ontem à noite, após o jantar.”',
+          patient: '“Well, I started to feel a lot of pain yesterday evening after dinner. It is like a tight-squeezing pain that gets really sharp and then eases off and it’s mostly around my belly button but everywhere else is sore.”',
+          translation: '“Bom, eu comecei a sentir muita dor ontem a noite após o jantar. É como se fosse uma dor forte, em aperto que fica muito aguda/afiada e depois diminui e é principalmente ao redor do meu umbigo, mas todos os outros lugares estão doloridos.”',
           feedback: {
             heading: '(P)rogression',
             string: 'Esse é o quarto tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar a progressão da queixa.'
@@ -97,8 +97,8 @@ const CaseTwoFlow = {
           }
         }},
         {label: 'Do you have any other symptoms?', result: {
-          patient: '“I’ve vomited a couple times this morning and it’s been three days since I last went to the toilet to defecate which is a little unusual.”',
-          translation: '“Vomitei algumas vezes esta manhã e fazem três dias desde a última vez que fui ao banheiro para defecar, o que é um pouco incomum.”',
+          patient: '“I’ve vomited a couple times this morning (no blood) and it’s been three days since I last went to the toilet to defecate which is a little unusual.”',
+          translation: '“Vomitei algumas vezes esta manhã (sem sangue) e fazem três dias desde a última vez que fui ao banheiro para defecar, o que é um pouco incomum.”',
           feedback: {
             heading: '(A)ssociated symptoms',
             string: 'Esse é o último tópico dentro do mnemônico ODIPARA e tem o objetivo de avaliar os sintomas associados à queixa principal.'
@@ -144,8 +144,8 @@ const CaseTwoFlow = {
         {label: 'Do you have a partner?', result: false},
         {label: 'Are you taking any medication at the moment?', result: false},
         {label: 'Does anyone in your family have any medical conditions?', result: {
-          patient: '“My mother had a heart attack two years ago and she also has high blood pressure”',
-          translation: '“Minha mãe teve um ataque cardíaco dois anos atrás e ela também tem pressão alta.”',
+          patient: '“My mother died of a heart attack two years ago and my dad takes medication to High Blood Pressure.”',
+          translation: '“Minha mãe morreu de um infarto dois anos atrás e o meu pai toma remédios para Pressão alta.”',
           feedback: {
             heading: 'Correct!',
             string: 'Essa pergunta significa "Alguém da sua família tem alguma condição de saúde?" e faz parte do detalhamento do histórico familiar do paciente.'
@@ -156,26 +156,28 @@ const CaseTwoFlow = {
     SOCIAL_HISTORY: {
       label: 'Social History',
       intro: SocialHistoryIntro([
-        'Do you live with anyone?',
+        'Who do you live with?',
+        'Do you have any children?',
         'Do you still work/what did you used to do for work?',
-        'How do you manage at home?',
-        'Do you smoke?',
-        'Have you ever smoked?',
-        'Do you drink alcohol? If yes, how many drinks would you say you have in a week?'
+        'Do you smoke?/Have you ever smoked?',
+        'Do you drink alcohol? If yes, how many drinks would you say you have in a week?',
+        '⁠Do you work out? How often?',
+        'What do you eat on a daily basis?'
       ]),
       options: [
         {
           result: {
-            patient: '“I live with my husband. I’m normally independent and work as a florist but I’m thinking about retiring. I don’t smoke but I do share a bottle of wine with my husband on the weekends.”',
-            translation: '“Eu moro com meu marido. Sou autônoma e trabalho como florista, mas estou pensando em me aposentar. Não fumo, mas eu costumo dividir uma garrafa de vinho com meu marido nos fins de semana.”',
+            patient: '“I live with my husband and I don’t have any children. I work as an independent florist but I’m thinking about retiring. I don’t smoke but I usually share a bottle of wine with my husband on the weekends for the past 17 years that we have been together. I go to the gym three times a week for thirty minutes after work and I also walk early on the mornings for one hour every day. I usually have cereal and milk for breakfast at 6am, sometimes a full english breakfast, for lunch I have chicken sandwiches with bananas or oranges, for dinner I have spaghetti or lasagne, sometimes chicken. But yesterday I wasn’t being able to eat properly.”',
+            translation: '“Eu moro com meu marido e não tenho filhos. Trabalho como florista autônoma, mas estou pensando em me aposentar. Não fumo, mas costumo dividir uma garrafa de vinho com meu marido nos finais de semana há 17 anos, desde quando estamos juntos. Eu vou para a academia três vezes na semana por trinta minutos após o trabalho e eu também caminho por uma hora bem cedo todas as manhãs. Costumo comer cereal com leite para o café da manhã às 06h, algumas vezes um café da manhã inglês completo, para o almoço como sanduíches de frango com bananas ou laranjas, para a janta eu como espaguete ou lasanha, alguma vezes frango. Mas ontem não consegui comer direito.”',
             feedback: {
               helpers: [{component: SocialHistoryHelper([
-                'Do you live with anyone?',
+                'Who do you live with?',
+                'Do you have any children?',
                 'Do you still work/what did you used to do for work?',
-                'How do you manage at home?',
-                'Do you smoke?',
-                'Have you ever smoked?',
-                'Do you drink alcohol? If yes, how many drinks would you say you have in a week?'
+                'Do you smoke?/Have you ever smoked?',
+                'Do you drink alcohol? If yes, how many drinks would you say you have in a week?',
+                '⁠Do you work out? How often?',
+                'What do you eat on a daily basis?'
               ]), x: 35, y: 40}]
             }
           }
@@ -195,8 +197,8 @@ const CaseTwoFlow = {
           }
         }},
         {label: 'Are you allergic to any drugs?', result: {
-          patient: '“No.”',
-          translation: '“Não.”',
+          patient: '“I am allergic to penicillin and usually I have rash when I take it.”',
+          translation: '“Sou alérgica a penicilina e geralmente tenho rash cutâneo quando tomo.”',
           feedback: {
             heading: 'Correct!',
             string: 'Essa pergunta significa "Você tem alergia a algum medicamento?" e faz parte do detalhamento da história medicamentosa do paciente.',

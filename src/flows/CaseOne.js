@@ -46,7 +46,7 @@ const CaseOneFlow = {
     },
     HISTORY_CHIEF_COMPLAINT: {
       label: 'History of Principal Complaint',
-      hint: 'Selecione mnemônico mais adequado para detalhar a queixa de “chest pain” na História da Doença Atual:',
+      hint: 'Selecione o mnemônico mais adequado para detalhar a queixa de “chest pain” na História da Doença Atual:',
       options: [
         {label: 'SOCRATES', result: { action: 'HISTORY_CHIEF_COMPLAINT_SOCRATES' }},
         {label: 'ODIPARA', result: false}
