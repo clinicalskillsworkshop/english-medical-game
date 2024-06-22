@@ -86,8 +86,8 @@ const CaseOneFlow = {
           }
         }},
         {label: 'Apart from the pain, do you feel anything else? ', result: {
-          patient: '“Yes, absolutely, I’m not sleeping well, I feel very tired and I’ve started feeling really feverish in my sleep. There is also this dry cough that is present all the time.”',
-          translation: '“Sim, com certeza, não estou dormindo bem, me sinto muito cansado e comecei a me sentir febril ao dormir. Também tem essa tosse seca que está presente o tempo todo.”',
+          patient: '“Like I said, I have been coughing a lot and it’s a very dry cough making me feel a bit breathless. Apart from that I have not been sleeping well because I feel really feverish and sweaty.”',
+          translation: '“Como eu disse, tenho tossido muito e é uma tosse muito seca que me deixa um pouco sem fôlego. Além disso, não tenho dormido bem porque me sinto muito febril e suado.”',
           feedback: {
             heading: '(A)ssociated symptoms.',
             string: 'Esse é o quinto tópico dentro do mnemônico SOCRATES e tem o objetivo de pesquisar os sintomas associados.'
@@ -215,8 +215,8 @@ const CaseOneFlow = {
           }
         }},
         {label: 'Are you taking any medications at the moment? Which? ', result: {
-          patient: '“No, I’m not.”',
-          translation: '“Não estou.”',
+          patient: '“My neighbor told me to use Acetylcystein for the cough but I never got to buy it.”',
+          translation: '“Meu vizinho me disse para usar Acetilcisteína para a tosse, mas eu não cheguei a comprar.”',
           feedback: {
             heading: 'Correct!',
             string: 'Essa pergunta significa “Você está tomando alguma medicação no momento? Qual?” e faz parte do detalhamento da história medicamentosa do paciente. '
