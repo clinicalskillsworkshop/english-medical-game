@@ -12,7 +12,7 @@ function SocialHistoryIntro(questions, { setIntroCompleted }) {
           label='Explore Social History'
           type='secondary'
           style={{ width: '400px'}}
-          x={300} y={600} 
+          x={250} y={600} 
           onClick={() => setExploreClicked(true)}/>
           :
           <div className='hint'>

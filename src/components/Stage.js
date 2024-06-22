@@ -30,8 +30,9 @@ function Stage( { action, reset, backgroundClass } ) {
       {option && <Interactive 
         patient={option.result.patient} 
         translation={option.result.translation}
-        x={350}
-        y={200}
+        x={option.result.x ?? 350}
+        y={option.result.y ?? 200}
+        style={option.result.style}
       />}
 
       {!option && !showIntro && action.helpers && action.helpers.map((helper, key) => {

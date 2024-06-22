@@ -195,7 +195,7 @@ const CaseOneFlow = {
                 'Do you smoke?',
                 'Do you drink alcohol?',
                 'Do you use recreational drugs?'
-              ]), x: 35, y: 40}]
+              ]), x: 15, y: 40}]
             }
           }
         }
