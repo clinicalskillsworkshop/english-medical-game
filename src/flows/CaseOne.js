@@ -2,7 +2,9 @@ import DrugHistoryOptionHelper from "../components/Helpers/DrugHistoryOptionHelp
 import HistoryChiefComplaintHelper from "../components/Helpers/HistoryChiefComplaintHelper";
 import SocialHistoryHelper from "../components/Helpers/SocialHistoryHelper";
 import HistoryChiefComplaintIntro from "../components/Intros/HistoryChiefComplaintIntro";
+import PhysicalExaminationIntro from "../components/Intros/PhysicalExaminationIntro";
 import SocialHistoryIntro from "../components/Intros/SocialHistoryIntro";
+import PhysicalExaminationIntroImage from "../components/Intros/PhysicalExaminationIntro/1.jpg";
 
 const CaseOneFlow = {
   backgroundClass: 'case-1',
@@ -26,6 +28,7 @@ const CaseOneFlow = {
     {label: 'Family History', action: 'FAMILY_HISTORY'},
     {label: 'Social History', action: 'SOCIAL_HISTORY'},
     {label: 'Drug History', action: 'DRUG_HISTORY'},
+    {label: 'Physical Examination', action: 'PHYSICAL_EXAM'}
   ],
   actions: {
     PRINCIPAL_CHIEF_COMPLAINT: {
@@ -224,6 +227,15 @@ const CaseOneFlow = {
         }},
         {label: 'Do you do any other drugs?', result: false},
       ]
+    },
+    PHYSICAL_EXAM: {
+      label: 'Physical Examination',
+      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, [
+        ''
+      ], [
+        ''
+      ]),
+      options: []
     }
   }
 };

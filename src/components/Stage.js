@@ -19,8 +19,10 @@ function Stage( { action, reset, backgroundClass } ) {
   useEffect(() => {
     if (!showIntro && action.options.length === 1) {
       setOption(action.options[0]);
+    } else if (!showIntro && action.options.length === 0) {
+      reset();
     }
-  }, [action.options, showIntro]);
+  }, [action.options, reset, showIntro]);
 
   return (
     <div className={'stage ' + backgroundClass}>

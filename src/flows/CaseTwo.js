@@ -1,6 +1,8 @@
 import HistoryPresentIllnessHelper from "../components/Helpers/HistoryPresentIllnessHelper";
 import SocialHistoryHelper from "../components/Helpers/SocialHistoryHelper";
 import HistoryPresentIllnessIntro from "../components/Intros/HistoryPresentIllnessIntro";
+import PhysicalExaminationIntro from "../components/Intros/PhysicalExaminationIntro";
+import PhysicalExaminationIntroImage from "../components/Intros/PhysicalExaminationIntro/2.jpg";
 import SocialHistoryIntro from "../components/Intros/SocialHistoryIntro";
 
 const CaseTwoFlow = {
@@ -25,6 +27,7 @@ const CaseTwoFlow = {
     {label: 'Family History', action: 'FAMILY_HISTORY'},
     {label: 'Social History', action: 'SOCIAL_HISTORY'},
     {label: 'Drug History', action: 'DRUG_HISTORY'},
+    {label: 'Physical Examination', action: 'PHYSICAL_EXAM'}
   ],
   actions: {
     PRESENTING_COMPLAINT: {
@@ -208,6 +211,31 @@ const CaseTwoFlow = {
         }},
         {label: 'What do you eat in a day?', result: false},
       ]
+    },
+    PHYSICAL_EXAM: {
+      label: 'Physical Examination',
+      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, [
+        'The abdomen is distended with evidence of previous surgery;',
+        'There are no obvious masses, herniae or stomas seen or stigmata of liver disease;',
+        'Cullen’s and Grey-Turner’s signs are negative;',
+        'There is general abdominal tenderness on light palpation;',
+        'There is no rebound tenderness;',
+        'Deep palpation is not tolerated as it becomes increasingly painful;',
+        'There is no palpable hepatosplenomegaly and Murphy’s sign is negative;',
+        'There is no shifting dullness;',
+        'High-pitched bowel sounds are heard.'
+      ], [
+        'O abdômen está distendido com evidência de cirurgia prévia;',
+        'Não há massas evidentes, hérnias ou estomas visíveis, nem estigmas de doença hepática;',
+        'Os sinais de Cullen e Grey-Turner são negativos;',
+        'Presença de dor abdominal à palpação superficial;',
+        'Descompressão brusca negativa;',
+        'A palpação profunda não é tolerada pois se torna mais dolorosa;',
+        'Não há hepatosplenomegalia palpável e o sinal de Murphy é negativo;',
+        'Não há macicez móvel;',
+        'Ruídos Hidroaéreos aumentados são auscultados.'
+      ]),
+      options: []
     }
   }
 };

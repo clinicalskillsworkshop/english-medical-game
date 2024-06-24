@@ -1,0 +1,28 @@
+.physicalExaminationIntro .hint {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  width: 380px;
+  top: 100px;
+  left: 620px;
+}
+
+.physicalExaminationIntro img {
+  position: absolute;
+  top: 200px;
+  left: 170px;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid #e5ab18;
+}
+
+.physicalExaminationIntro .hint .heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.physicalExaminationIntro .hint .body {
+  line-height: 25px;
+}
