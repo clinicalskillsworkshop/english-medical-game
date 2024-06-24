@@ -214,7 +214,7 @@ const CaseTwoFlow = {
     },
     PHYSICAL_EXAM: {
       label: 'Physical Examination',
-      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, [
+      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, 'Abdominal Examination:', [
         'The abdomen is distended with evidence of previous surgery;',
         'There are no obvious masses, herniae or stomas seen or stigmata of liver disease;',
         'Cullen’s and Grey-Turner’s signs are negative;',

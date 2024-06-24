@@ -2,18 +2,18 @@ import { useState } from 'react';
 import Button from '../Common/Button';
 import './PhysicalExaminationIntro.css';
 
-function PhysicalExaminationIntro(image, originals, translations, { setIntroCompleted }) {
+function PhysicalExaminationIntro(image, heading, originals, translations, { setIntroCompleted }) {
   const [translation, setTranslation] = useState(false);
   return (
     <>
       <div className='physicalExaminationIntro'>
         <img src={image} alt='Physical Exam' />
         <div className='hint'>
-          <div className='heading'>Abdominal Examination:</div>
+          <div className='heading'>{heading}</div>
           <ul className='body'>
             {translation ? 
-              originals.map(s => <li>{s}</li>) : 
-              translations.map(s => <li>{s}</li>)}
+              translations.map(s => <li>{s}</li>) : 
+              originals.map(s => <li>{s}</li>)}
           </ul>
         </div>
       </div>
@@ -34,6 +34,6 @@ function PhysicalExaminationIntro(image, originals, translations, { setIntroComp
   );
 }
 
-const PhysicalExaminationIntroBuilder = (image, originals, translations) => 
-    PhysicalExaminationIntro.bind(this, image, originals, translations);
+const PhysicalExaminationIntroBuilder = (image, heading, originals, translations) => 
+    PhysicalExaminationIntro.bind(this, image, heading, originals, translations);
 export default PhysicalExaminationIntroBuilder;

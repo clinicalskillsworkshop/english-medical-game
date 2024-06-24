@@ -230,10 +230,16 @@ const CaseOneFlow = {
     },
     PHYSICAL_EXAM: {
       label: 'Physical Examination',
-      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, [
-        ''
+      intro: PhysicalExaminationIntro(PhysicalExaminationIntroImage, 'Respiratory Examination:', [
+        'No scars or chest wall deformity;',
+        'Mildly reduced expansion on the left side;',
+        'Decreased breath sounds bilateral. No crackles/rhonchi/wheezes;',
+        'Weight loss of 2kg in 3 weeks.'
       ], [
-        ''
+        'Ausência de cicatrizes ou deformidades na parede torácica;',
+        'Expansão levemente reduzida no lado esquerdo;',
+        'Murmúrios vesiculares diminuídos em ambos os pulmões. Sem estertores/roncos/sibilos;',
+        'Perda de peso de 2kg em 3 semanas.'
       ]),
       options: []
     }
